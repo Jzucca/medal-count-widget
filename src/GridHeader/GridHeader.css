@@ -1,0 +1,25 @@
+.medal-stats-header {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+}
+
+div.medal-stats-header:nth-child(-n + 3) {
+  margin-right: 2em;
+}
+
+.gold-col-header {
+  background-color: gold;
+}
+
+.silver-col-header {
+  background-color: silver;
+}
+
+.bronze-col-header {
+  background-color: brown;
+}
+
+.total-col-header {
+  background-color: grey;
+}

@@ -3,10 +3,18 @@
   top: 4em;
   position: relative;
   margin: 0 auto;
-  text-align: center;
 }
 
 .medal-widget-main h1 {
-  padding-bottom: 4px;
-  border-bottom: 2px solid grey;
+  font-weight: 400;
+}
+
+.medal-widget-stats {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5em;
+}
+
+.medal-widget-col-headers {
+  display: flex;
 }

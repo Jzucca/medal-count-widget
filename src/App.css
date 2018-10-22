@@ -5,3 +5,8 @@
   margin: 0 auto;
   text-align: center;
 }
+
+.medal-widget-main h1 {
+  padding-bottom: 4px;
+  border-bottom: 2px solid grey;
+}

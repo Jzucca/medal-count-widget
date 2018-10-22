@@ -4,7 +4,8 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="medal-widget-main">
+        <h1>Medal Count</h1>
       </div>
     );
   }

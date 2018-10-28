@@ -26,10 +26,10 @@ function GridRows({ countries, sortBy }) {
         <div className="row">{index + 1}</div>
         <div className="row">flag</div>
         <div className="row">{country.code}</div>
-        <div className="row totals">{country.gold}</div>
-        <div className="row totals">{country.silver}</div>
-        <div className="row totals">{country.bronze}</div>
-        <div className="row totals">
+        <div className="row rankings">{country.gold}</div>
+        <div className="row rankings">{country.silver}</div>
+        <div className="row rankings">{country.bronze}</div>
+        <div className="row rankings total">
           {country.gold + country.silver + country.bronze}
         </div>
       </div>

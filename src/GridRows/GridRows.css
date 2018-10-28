@@ -1,11 +1,17 @@
 .medals-widget-row {
   display: flex;
+  color: gray;
 }
 
 .medals-widget-row .row {
   flex: 1;
 }
 
-.totals {
+.rankings {
   text-align: center;
+}
+
+.total {
+  font-weight: bold;
+  color: black;
 }

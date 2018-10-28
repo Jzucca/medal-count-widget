@@ -1,5 +1,5 @@
 .medal-widget-main {
-  width: 40%;
+  width: 50%;
   top: 4em;
   position: relative;
   margin: 0 auto;
@@ -9,12 +9,5 @@
   font-weight: 400;
 }
 
-.medal-widget-stats {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 1.5em;
-}
-
-.medal-widget-col-headers {
-  display: flex;
+.medal-widget-grid {
 }

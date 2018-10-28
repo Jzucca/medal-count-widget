@@ -1,0 +1,11 @@
+.medals-widget-row {
+  display: flex;
+}
+
+.medals-widget-row .row {
+  flex: 1;
+}
+
+.totals {
+  text-align: center;
+}

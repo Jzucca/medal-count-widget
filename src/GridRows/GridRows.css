@@ -1,6 +1,9 @@
 .medals-widget-row {
   display: flex;
   color: gray;
+  padding: 0.5em;
+  border-bottom: 1px solid lightgray;
+  font-weight: 600;
 }
 
 .medals-widget-row .row {
@@ -14,4 +17,55 @@
 .total {
   font-weight: bold;
   color: black;
+}
+
+/*****COUNTRY FLAGS*****/
+.flags {
+  background: url("https://s3-us-west-2.amazonaws.com/reuters.medals-widget/flags.png")
+    no-repeat 0 0;
+  width: 28px;
+  height: 17px;
+}
+
+.flags.USA {
+  background-position: 0 -204px;
+}
+.flags.SWE {
+  background-position: 0 -187px;
+}
+.flags.SUI {
+  background-position: 0 -170px;
+}
+.flags.RUS {
+  background-position: 0 -153px;
+}
+.flags.NOR {
+  background-position: 0 -136px;
+}
+.flags.NED {
+  background-position: 0 -119px;
+}
+.flags.ITA {
+  background-position: 0 -102px;
+}
+.flags.GER {
+  background-position: 0 -85px;
+}
+.flags.GER {
+  background-position: 0 -85px;
+}
+.flags.FRA {
+  background-position: 0 -68px;
+}
+.flags.CHN {
+  background-position: 0 -51px;
+}
+.flags.CAN {
+  background-position: 0 -34px;
+}
+.flags.BLR {
+  background-position: 0 -17px;
+}
+.flags.AUT {
+  background-position: 0 0px;
 }

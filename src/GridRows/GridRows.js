@@ -17,14 +17,14 @@ function GridRows({ countries, sortBy }) {
     return b[sortBy] - a[sortBy];
   });
 
-  //we just want the top ten
+  //render only the top ten results
   copy = copy.slice(0, 10);
 
   const rows = copy.map((country, index) => {
     return (
       <div className="medals-widget-row" key={country.code}>
         <div className="row">{index + 1}</div>
-        <div className="row">flag</div>
+        <div className={`row flags ${country.code}`} />
         <div className="row">{country.code}</div>
         <div className="row rankings">{country.gold}</div>
         <div className="row rankings">{country.silver}</div>

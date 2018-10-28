@@ -23,7 +23,7 @@ class App extends Component {
     super(props);
     this.state = {
       countries: [],
-      selectedColumn: ""
+      selectedColumn: "gold"
     };
 
     this.handleColumnSort = this.handleColumnSort.bind(this);
@@ -54,7 +54,10 @@ class App extends Component {
             selected={this.state.selectedColumn}
             handleColumnClick={this.handleColumnSort}
           />
-          <GridRows countries={this.state.countries} />
+          <GridRows
+            countries={this.state.countries}
+            sortBy={this.state.selectedColumn}
+          />
         </div>
       </div>
     );

@@ -7,7 +7,7 @@ function GridHeaders({ headers, handleColumnClick, selected }) {
   const gridHeaders = headers.map(headerVal => {
     return (
       <GridHeader
-        key={headerVal}
+        key={headerVal.title || headerVal.medal}
         colHeader={headerVal}
         handleColSelect={handleColumnClick}
         selected={selected}

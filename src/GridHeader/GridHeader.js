@@ -3,22 +3,20 @@ import React from "react";
 import "./GridHeader.css";
 
 function GridHeader({ selected, handleColSelect, colHeader }) {
-  //const active = selected === colHeader ? "selected" : "";
+  const active =
+    selected === colHeader.medal || selected === colHeader.title
+      ? "selected"
+      : "";
   const medalHeader = colHeader.medal ? colHeader.medal : null;
   const headerValue = colHeader.medal ? colHeader.medal : colHeader.title;
-  const medal = medalHeader ? "medal" : null;
+  const header = medalHeader ? "medal" : "total-header";
 
   return (
-    <div className={`column-header`}>
+    <div className={`column-header ${active}`}>
       <div
-        className={medal}
+        className={`${header} ${medalHeader}`}
         onClick={handleColSelect}
         data-column={headerValue}
-        style={{
-          color: `${medalHeader}`,
-          fontSize: "1.5em",
-          textAlign: "center"
-        }}
       >
         {colHeader.title === "total" ? "Total" : null}
       </div>

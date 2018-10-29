@@ -1,23 +1,41 @@
 .column-header {
   cursor: pointer;
   flex: 1;
+  padding: 0.5em 0;
 }
 
-.medal::after {
-  content: "\25CF";
-  font-size: 1.5em;
-}
-
-.total-col-header {
-  color: darkslategray;
-  font-size: 1.2em;
+.medal {
+  margin: 5px auto 0;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
 }
 
 .selected::before {
   content: "";
   display: block;
-  width: 100%;
-  margin-top: -7px;
-  height: 2px;
-  background-color: #9f9d99;
+  width: 80%;
+  height: 3px;
+  margin: 0 auto;
+  background-color: gray;
+}
+
+.gold {
+  background-color: #ffcf40;
+}
+
+.silver {
+  background-color: #c0c0c0;
+}
+
+.bronze {
+  background-color: #cc6633;
+}
+
+.total-header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  color: #000;
 }

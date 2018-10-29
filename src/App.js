@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 import "./App.css";
-import GridHeaders from "./GridHeader/GridHeaders";
+import GridHeaders from "./GridHeaders/GridHeaders";
 import GridRows from "./GridRows/GridRows";
 import ErrorMessage from "./ErrorMessage/ErrorMessage";
 
@@ -45,6 +45,7 @@ class App extends Component {
   }
 
   handleColumnSort(event) {
+    //using the data-* attribute to access which header is selected
     const columnHeader = event.target.dataset.column;
     this.setState({
       selectedColumn: columnHeader
@@ -59,17 +60,15 @@ class App extends Component {
     return (
       <div className="medal-widget-main">
         <h1>Medal Count</h1>
-        <div className="medal-widget-grid">
-          <GridHeaders
-            headers={gridHeaders}
-            selected={this.state.selectedColumn}
-            handleColumnClick={this.handleColumnSort}
-          />
-          <GridRows
-            countries={this.state.countries}
-            sortBy={this.state.selectedColumn}
-          />
-        </div>
+        <GridHeaders
+          headers={gridHeaders}
+          selected={this.state.selectedColumn}
+          handleColumnClick={this.handleColumnSort}
+        />
+        <GridRows
+          countries={this.state.countries}
+          sortBy={this.state.selectedColumn}
+        />
       </div>
     );
   }

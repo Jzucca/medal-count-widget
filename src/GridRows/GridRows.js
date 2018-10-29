@@ -12,9 +12,10 @@ function GridRows({ countries, sortBy }) {
       const aTotal = a.gold + a.silver + a.bronze;
       const bTotal = b.gold + b.silver + b.bronze;
       //sort by descending order
+      //if two values are equal break by tiebreaker value (same below)
       return bTotal - aTotal || b[tieBreaker] - a[tieBreaker];
     }
-    //sort by descending order
+
     return b[sortBy] - a[sortBy] || b[tieBreaker] - a[tieBreaker];
   });
 

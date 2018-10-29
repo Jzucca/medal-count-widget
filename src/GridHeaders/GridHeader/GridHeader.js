@@ -7,7 +7,9 @@ function GridHeader({ selected, handleColSelect, colHeader }) {
     selected === colHeader.medal || selected === colHeader.title
       ? "selected"
       : "";
+
   const medalHeader = colHeader.medal ? colHeader.medal : null;
+  //using the data-column attribute to set column headers(see below)
   const headerValue = colHeader.medal ? colHeader.medal : colHeader.title;
   const header = medalHeader ? "medal" : "total-header";
 

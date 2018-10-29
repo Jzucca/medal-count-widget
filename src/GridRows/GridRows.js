@@ -3,6 +3,7 @@ import React from "react";
 import "./GridRows.css";
 
 function GridRows({ countries, sortBy }) {
+  let tieBreaker = sortBy === "gold" ? "silver" : "gold";
   //the sort method is "in place" so we make a copy of the array to avoid mutating state
   let copy = [...countries];
 
@@ -11,10 +12,10 @@ function GridRows({ countries, sortBy }) {
       const aTotal = a.gold + a.silver + a.bronze;
       const bTotal = b.gold + b.silver + b.bronze;
       //sort by descending order
-      return bTotal - aTotal;
+      return bTotal - aTotal || b[tieBreaker] - a[tieBreaker];
     }
     //sort by descending order
-    return b[sortBy] - a[sortBy];
+    return b[sortBy] - a[sortBy] || b[tieBreaker] - a[tieBreaker];
   });
 
   //render only the top ten results

@@ -6,8 +6,8 @@
 
 .medal {
   margin: 5px auto 0;
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.4em;
+  height: 1.4em;
   border-radius: 50%;
 }
 
@@ -34,7 +34,6 @@
 
 .total-header {
   text-align: center;
-  font-weight: bold;
   font-size: 1.4em;
   text-transform: uppercase;
   color: #000;

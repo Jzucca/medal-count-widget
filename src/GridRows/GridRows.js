@@ -3,7 +3,7 @@ import React from "react";
 import "./GridRows.css";
 
 function GridRows({ countries, sortBy }) {
-  let tieBreaker = sortBy === "gold" ? "silver" : "gold";
+  const tieBreaker = sortBy === "gold" ? "silver" : "gold";
   //the sort method is "in place" so we make a copy of the array to avoid mutating state
   let copy = [...countries];
 

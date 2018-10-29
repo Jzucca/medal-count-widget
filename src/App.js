@@ -4,6 +4,7 @@ import axios from "axios";
 import "./App.css";
 import GridHeaders from "./GridHeader/GridHeaders";
 import GridRows from "./GridRows/GridRows";
+import ErrorMessage from "./ErrorMessage/ErrorMessage";
 
 const url =
   "https://s3-us-west-2.amazonaws.com/reuters.medals-widget/medals.json";
@@ -23,18 +24,24 @@ class App extends Component {
     super(props);
     this.state = {
       countries: [],
-      selectedColumn: "gold"
+      selectedColumn: "gold",
+      displayError: false
     };
 
     this.handleColumnSort = this.handleColumnSort.bind(this);
   }
 
   componentDidMount() {
-    axios.get(url).then(data => {
-      this.setState({
-        countries: this.state.countries.concat(data.data)
+    axios
+      .get(url)
+      .then(data => {
+        this.setState({
+          countries: this.state.countries.concat(data.data)
+        });
+      })
+      .catch(err => {
+        this.setState({ displayError: true });
       });
-    });
   }
 
   handleColumnSort(event) {
@@ -45,6 +52,10 @@ class App extends Component {
   }
 
   render() {
+    if (this.state.displayError) {
+      return <ErrorMessage error={this.state.displayError} />;
+    }
+
     return (
       <div className="medal-widget-main">
         <h1>Medal Count</h1>

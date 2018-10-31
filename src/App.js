@@ -24,7 +24,7 @@ class App extends Component {
     super(props);
     this.state = {
       countries: [],
-      selectedColumn: "gold",
+      selectedColumn: this.props.medal || "gold", //when we get props from initialzing the widget
       error: ""
     };
 

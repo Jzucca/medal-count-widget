@@ -3,7 +3,7 @@
 - The grid medals data is received by calling - https://s3-us-west-2.amazonaws.com/reuters.medals-widget/medals.json
 - The flags are received by calling - https://s3-us-west-2.amazonaws.com/reuters.medals-widget/flags.png
 - To run the project clone the repository then:
-
+  - npm install
   - Development(to run a local dev server): npm run start,
   - Production (to build for production): npm run build
 

@@ -10,7 +10,7 @@ ReactDOM.render(<App />, document.getElementById("root"));
 // export const initialize = (medal, selector) => {
 //   const container = document.getElementById(selector)
 //     ? document.getElementById(selector)
-//     : document.getElementById("root");
+//     : document.getElementById("root"); //this ternary is mostly for a practical test example
 //   ReactDOM.render(<App medal={medal} />, container);
 // };
 

@@ -7,7 +7,7 @@ import GridRows from "./GridRows/GridRows";
 import ErrorMessage from "./ErrorMessage/ErrorMessage";
 
 const url =
-  "https://s3-us-west-2.amazonaws.com/reuters.medals-widget/medals.jsonn";
+  "https://s3-us-west-2.amazonaws.com/reuters.medals-widget/medals.json";
 
 const gridHeaders = [
   { title: "rank" },

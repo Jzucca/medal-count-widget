@@ -7,7 +7,7 @@ import GridRows from "./GridRows/GridRows";
 import ErrorMessage from "./ErrorMessage/ErrorMessage";
 
 const url =
-  "https://s3-us-west-2.amazonaws.com/reuters.medals-widget/medals.json";
+  "https://s3-us-west-2.amazonaws.com/reuters.medals-widget/medals.jsonn";
 
 const gridHeaders = [
   { title: "rank" },
@@ -40,9 +40,13 @@ class App extends Component {
         });
       })
       .catch(err => {
-        this.setState({
-          error: err.response.status
-        });
+        let response;
+        if (err.response) {
+          response = err.response.status;
+        } else {
+          response = err.toString();
+        }
+        this.setState({ error: response });
       });
   }
 

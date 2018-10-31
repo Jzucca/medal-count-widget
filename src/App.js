@@ -25,7 +25,7 @@ class App extends Component {
     this.state = {
       countries: [],
       selectedColumn: "gold",
-      displayError: false
+      error: ""
     };
 
     this.handleColumnSort = this.handleColumnSort.bind(this);
@@ -40,7 +40,9 @@ class App extends Component {
         });
       })
       .catch(err => {
-        this.setState({ displayError: true });
+        this.setState({
+          error: err.response.status
+        });
       });
   }
 
@@ -53,8 +55,8 @@ class App extends Component {
   }
 
   render() {
-    if (this.state.displayError) {
-      return <ErrorMessage error={this.state.displayError} />;
+    if (this.state.error) {
+      return <ErrorMessage error={this.state.error} />;
     }
 
     return (

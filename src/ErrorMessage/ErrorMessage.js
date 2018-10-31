@@ -11,7 +11,7 @@ function ErrorMessage({ error }) {
   return (
     <div className="error">
       <img src={errorImg} alt="http error" />
-      <span>WHOOPS!...something went wrong.</span>
+      <h1>{error}</h1>
     </div>
   );
 }
